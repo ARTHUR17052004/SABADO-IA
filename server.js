@@ -1,73 +1,121 @@
 const express =
 require('express');
 
-const cors =
-require('cors');
+const router =
+express.Router();
 
-// =========================
-// ROTAS
-// =========================
-
-const pedidosRoute =
-require('./routes/pedidos');
-
-const financeiroRoute =
-require('./routes/financeiro');
-
-const comercialRoute =
-require('./routes/comercial');
-
-const sabadoRoute =
-require('./routes/sabado');
-
-// =========================
-// APP
-// =========================
-
-const app =
-express();
-
-app.use(cors());
-
-app.use(express.json());
-
-// =========================
-// ROTAS ANTIGAS
-// =========================
-
-app.use(pedidosRoute);
-
-app.use(financeiroRoute);
-
-app.use(comercialRoute);
+const { exec } =
+require('child_process');
 
 // =========================
 // SABADO CENTRAL
 // =========================
 
-app.use(
-    '/sabado',
-    sabadoRoute
+router.post(
+    '/',
+    async (req, res) => {
+
+        try {
+
+            // =====================
+            // PERGUNTA
+            // =====================
+
+            const pergunta =
+                req.body.pergunta;
+
+            // =====================
+            // VALIDA
+            // =====================
+
+            if (!pergunta) {
+
+                return res.status(400)
+                .json({
+
+                    sucesso: false,
+
+                    erro:
+                    'Pergunta não enviada.'
+
+                });
+
+            }
+
+            // =====================
+            // EXECUTA CENTRAL
+            // =====================
+
+            exec(
+
+                `node workflowCentral.js "${pergunta}"`,
+
+                (
+
+                    erro,
+                    stdout,
+                    stderr
+
+                ) => {
+
+                    // =================
+                    // ERRO
+                    // =================
+
+                    if (erro) {
+
+                        return res.status(500)
+                        .json({
+
+                            sucesso: false,
+
+                            erro:
+                            erro.message
+
+                        });
+
+                    }
+
+                    // =================
+                    // RETORNO
+                    // =================
+
+                    return res.json({
+
+                        sucesso: true,
+
+                        resposta:
+                        stdout.trim()
+
+                    });
+
+                }
+
+            );
+
+        }
+
+        catch (erro) {
+
+            return res.status(500)
+            .json({
+
+                sucesso: false,
+
+                erro:
+                erro.message
+
+            });
+
+        }
+
+    }
+
 );
 
 // =========================
-// START
+// EXPORT
 // =========================
 
-app.listen(3000, () => {
-
-    console.log(
-`==========================
-SERVIDOR SABADO ONLINE
-PORTA: 3000
-
-ROTAS:
-POST /pedido
-POST /financeiro
-POST /comercial
-POST /sabado
-
-==========================`
-    );
-
-});
+module.exports =
+router;
