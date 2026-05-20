@@ -1,67 +1,59 @@
-const express = require('express');
+const express =
+require('express');
 
-const cors = require('cors');
+const cors =
+require('cors');
 
 // =========================
 // ROTAS
 // =========================
 
 const pedidosRoute =
-    require('./routes/pedidos');
+require('./routes/pedidos');
 
 const financeiroRoute =
-    require('./routes/financeiro');
+require('./routes/financeiro');
+
+const comercialRoute =
+require('./routes/comercial');
 
 // =========================
 // APP
 // =========================
 
-const app = express();
+const app =
+express();
 
 app.use(cors());
 
 app.use(express.json());
 
 // =========================
-// ROTAS API
+// ROTAS
 // =========================
 
 app.use(pedidosRoute);
 
 app.use(financeiroRoute);
 
+app.use(comercialRoute);
+
 // =========================
-// START SERVER
+// START
 // =========================
 
 app.listen(3000, () => {
 
     console.log(
-        '=========================='
-    );
+`==========================
+SERVIDOR SABADO ONLINE
+PORTA: 3000
 
-    console.log(
-        'SERVIDOR SABADO ONLINE'
-    );
-
-    console.log(
-        'PORTA: 3000'
-    );
-
-    console.log(
-        'ROTAS:'
-    );
-
-    console.log(
-        'POST /pedido'
-    );
-
-    console.log(
-        'POST /financeiro'
-    );
-
-    console.log(
-        '=========================='
+ROTAS:
+POST /pedido
+POST /financeiro
+POST /comercial
+==========================`
     );
 
 });

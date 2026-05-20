@@ -32,9 +32,6 @@ require('./services/goevo/fornecedor/tratarPerguntaFornecedor');
 const classificarIntencao =
 require('./services/ia/classificarIntencao');
 
-const memoria =
-require('./core/memoria');
-
 const buscarPedido =
 require('./services/goevo/pedido');
 
@@ -53,6 +50,28 @@ require('./services/goevo/pedido/tratarItens');
 const {
     salvarMemoriaItens
 } = require('./services/goevo/pedido/memoriaItens');
+
+// =========================
+// MEMÓRIA GLOBAL
+// =========================
+
+const {
+
+    salvarMemoria,
+    buscarMemoria
+
+} = require(
+    './core/memoriaGlobal'
+);
+
+// =========================
+// DATA GLOBAL
+// =========================
+
+const interpretarData =
+require(
+    './core/interpretadorData'
+);
 
 // =========================
 // EXECUTAR
@@ -80,6 +99,39 @@ async function executar() {
         return;
 
     }
+
+    // =====================
+    // DATA GLOBAL
+    // =====================
+
+    const data =
+
+        interpretarData(
+            pergunta
+        );
+
+    if (data) {
+
+        salvarMemoria(
+            'ultimaData',
+            data
+        );
+
+    }
+
+    // =====================
+    // SALVA CONTEXTO
+    // =====================
+
+    salvarMemoria(
+        'ultimaPergunta',
+        pergunta
+    );
+
+    salvarMemoria(
+        'ultimoModulo',
+        'pedido'
+    );
 
     // =====================
     // DATA ATUAL
@@ -205,19 +257,24 @@ async function executar() {
     }
 
     // =====================
-    // MEMÓRIA
+    // MEMÓRIA GLOBAL
     // =====================
 
     if (
 
         !numeroPedido &&
 
-        memoria.ultimoPedido
+        buscarMemoria(
+            'ultimoPedido'
+        )
 
     ) {
 
         numeroPedido =
-            memoria.ultimoPedido;
+
+            buscarMemoria(
+                'ultimoPedido'
+            );
 
     }
 
@@ -239,8 +296,10 @@ async function executar() {
     // SALVA MEMÓRIA
     // =====================
 
-    memoria.ultimoPedido =
-        numeroPedido;
+    salvarMemoria(
+        'ultimoPedido',
+        numeroPedido
+    );
 
     // =====================
     // CONSULTA ITENS
@@ -369,6 +428,15 @@ async function executar() {
             '\n' + alertas;
 
     }
+
+    // =====================
+    // SALVA RESPOSTA
+    // =====================
+
+    salvarMemoria(
+        'ultimaResposta',
+        resposta
+    );
 
     // =====================
     // FINAL

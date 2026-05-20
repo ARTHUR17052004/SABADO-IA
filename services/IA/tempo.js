@@ -1,29 +1,91 @@
+function obterAgora() {
+
+    return new Date(
+
+        new Date().toLocaleString(
+            'en-US',
+            {
+                timeZone:
+                    'America/Sao_Paulo'
+            }
+        )
+
+    );
+
+}
+
+// =========================
+// DATA FORMATADA
+// =========================
+
+function formatarData(data) {
+
+    const dia =
+        String(data.getDate())
+            .padStart(2, '0');
+
+    const mes =
+        String(data.getMonth() + 1)
+            .padStart(2, '0');
+
+    const ano =
+        data.getFullYear();
+
+    return `${dia}/${mes}/${ano}`;
+
+}
+
+// =========================
+// HORA FORMATADA
+// =========================
+
+function formatarHora(data) {
+
+    const hora =
+        String(data.getHours())
+            .padStart(2, '0');
+
+    const minuto =
+        String(data.getMinutes())
+            .padStart(2, '0');
+
+    return `${hora}:${minuto}`;
+
+}
+
+// =========================
+// DATA ATUAL
+// =========================
+
 function obterDataAtual() {
 
     const agora =
-        new Date();
+        obterAgora();
 
     return {
 
         data:
-            agora.toLocaleDateString(
-                'pt-BR'
+            formatarData(
+                agora
             ),
 
         hora:
-            agora.toLocaleTimeString(
-                'pt-BR'
-            ),
-
-        timestamp:
-            agora.getTime()
+            formatarHora(
+                agora
+            )
 
     };
 
 }
 
+// =========================
+// EXPORTS
+// =========================
+
 module.exports = {
 
-    obterDataAtual
+    obterAgora,
+    obterDataAtual,
+    formatarData
 
 };

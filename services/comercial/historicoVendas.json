@@ -1,0 +1,825 @@
+[
+  {
+    "tipo": "comercial",
+    "data": "19/05/2026",
+    "faturamento": "280,94 mil",
+    "quantidade": "2.568,28 t",
+    "vendedores": [
+      {
+        "nome": "Railton",
+        "valor": "104,80 mil"
+      },
+      {
+        "nome": "Joseter",
+        "valor": "93,05 mil"
+      },
+      {
+        "nome": "Marcelo",
+        "valor": "82,27 mil"
+      },
+      {
+        "nome": "Faturamento",
+        "valor": "0,62 mil"
+      },
+      {
+        "nome": "Administrativo",
+        "valor": "0,19 mil"
+      }
+    ],
+    "clientes": [
+      {
+        "nome": "CBC Construtora Brasil Central LTDA",
+        "valor": "65,30 mil"
+      },
+      {
+        "nome": "Consórcio CFJ",
+        "valor": "53,04 mil"
+      },
+      {
+        "nome": "AR Construção e Pavimentação LTDA",
+        "valor": "25,00 mil"
+      },
+      {
+        "nome": "Stadium Construtora LTDA - EPP",
+        "valor": "23,49 mil"
+      },
+      {
+        "nome": "EDP Infraestrutura e Pavimentação LTDA",
+        "valor": "9,51 mil"
+      },
+      {
+        "nome": "R V Rações LTDA",
+        "valor": "8,61 mil"
+      },
+      {
+        "nome": "ETICA Construtora LTDA",
+        "valor": "6,71 mil"
+      },
+      {
+        "nome": "Canedo Premoldados LTDA",
+        "valor": "5,61 mil"
+      },
+      {
+        "nome": "Município de Palminópolis",
+        "valor": "5,12 mil"
+      },
+      {
+        "nome": "Real Transportes e Materiais de Construção LTDA",
+        "valor": "4,88 mil"
+      }
+    ],
+    "produtos": [
+      {
+        "nome": "Areia de Brita",
+        "quantidade": "800,41 t",
+        "valor": "55,86 mil"
+      },
+      {
+        "nome": "Brita 0",
+        "quantidade": "717,16 t",
+        "valor": "72,82 mil"
+      },
+      {
+        "nome": "CBUQ Faixa C",
+        "quantidade": "586,52 t",
+        "valor": "90,91 mil"
+      },
+      {
+        "nome": "Brita 1",
+        "quantidade": "214,65 t",
+        "valor": "18,79 mil"
+      },
+      {
+        "nome": "Brita Graduada Simples",
+        "quantidade": "130,29 t",
+        "valor": "11,13 mil"
+      },
+      {
+        "nome": "Ultrasfalto CAP Cliente",
+        "quantidade": "86,58 t",
+        "valor": "13,65 mil"
+      },
+      {
+        "nome": "CBUQ Faixa C (Massa Asfáltica)",
+        "quantidade": "23,26 t",
+        "valor": "12,64 mil"
+      },
+      {
+        "nome": "Ultrasfalto",
+        "quantidade": "9,41 t",
+        "valor": "5,13 mil"
+      }
+    ]
+  },
+  {
+    "tipo": "comercial",
+    "data": "18/05/2026",
+    "faturamento": "226,35 mil",
+    "quantidade": "1.823,86 t",
+    "vendedores": [
+      {
+        "nome": "JOSE TERCIO",
+        "valor": "98,75 mil"
+      },
+      {
+        "nome": "MARCELO DIAS",
+        "valor": "69,61 mil"
+      },
+      {
+        "nome": "RAILTON MENDES DOS SANTOS",
+        "valor": "49,65 mil"
+      },
+      {
+        "nome": "ADMINISTRATIVO",
+        "valor": "8,35 mil"
+      },
+      {
+        "nome": "Railton Mendes dos Santos",
+        "valor": "37,41 mil"
+      },
+      {
+        "nome": "José Tercio",
+        "valor": "35,76 mil"
+      },
+      {
+        "nome": "Marcelo Dias",
+        "valor": "23,01 mil"
+      },
+      {
+        "nome": "Marcelo Dias",
+        "valor": "150,53 mil"
+      },
+      {
+        "nome": "Railton Mendes dos Santos",
+        "valor": "56,99 mil"
+      },
+      {
+        "nome": "Jose Tercio",
+        "valor": "47,55 mil"
+      },
+      {
+        "nome": "Administrativo",
+        "valor": "8,36 mil"
+      },
+      {
+        "nome": "Construtora Milao LTDA",
+        "valor": "33,68 mil"
+      },
+      {
+        "nome": "CBC Construitora Brasil Central LTDA",
+        "valor": "28,37 mil"
+      },
+      {
+        "nome": "Consorcio CFJ",
+        "valor": "26,73 mil"
+      },
+      {
+        "nome": "Etica Construtora LTDA",
+        "valor": "25,75 mil"
+      },
+      {
+        "nome": "Canedo Premoldados LTDA",
+        "valor": "9,06 mil"
+      },
+      {
+        "nome": "Escarpas do Corumba Empreendimentos LTDA",
+        "valor": "8,36 mil"
+      },
+      {
+        "nome": "R V Rações LTDA",
+        "valor": "7,95 mil"
+      },
+      {
+        "nome": "Comprado Empreendimentos LTDA",
+        "valor": "6,79 mil"
+      },
+      {
+        "nome": "Marcelo Dias",
+        "valor": "138,27 mil"
+      },
+      {
+        "nome": "Jose Tercio",
+        "valor": "116,5 mil"
+      },
+      {
+        "nome": "Railton Mendes dos Santos",
+        "valor": "46,42 mil"
+      },
+      {
+        "nome": "Administrativo",
+        "valor": "9,02 mil"
+      },
+      {
+        "nome": "Marcelo",
+        "valor": "107,33 mil"
+      },
+      {
+        "nome": "José",
+        "valor": "52,55 mil"
+      },
+      {
+        "nome": "Railton",
+        "valor": "45,84 mil"
+      },
+      {
+        "nome": "Administrativo",
+        "valor": "8,41 mil"
+      },
+      {
+        "nome": "Faturamento",
+        "valor": "1,36 mil"
+      },
+      {
+        "nome": "Marcelo",
+        "valor": "96,63 mil"
+      },
+      {
+        "nome": "Railton",
+        "valor": "51,73 mil"
+      },
+      {
+        "nome": "José Tercio",
+        "valor": "28,62 mil"
+      },
+      {
+        "nome": "Administrativo",
+        "valor": "4,11 mil"
+      },
+      {
+        "nome": "Faturamento",
+        "valor": "1,26 mil"
+      },
+      {
+        "nome": "Marcelo Dias",
+        "valor": "45,45 mil"
+      },
+      {
+        "nome": "José Tercio",
+        "valor": "43,02 mil"
+      },
+      {
+        "nome": "Railton Mendes dos Santos",
+        "valor": "2,99 mil"
+      },
+      {
+        "nome": "Marcelo",
+        "valor": "123,59 mil"
+      },
+      {
+        "nome": "José Ter",
+        "valor": "44,61 mil"
+      },
+      {
+        "nome": "Railton",
+        "valor": "19,52 mil"
+      },
+      {
+        "nome": "Faturamento Adm",
+        "valor": "0,81 mil"
+      },
+      {
+        "nome": "Victor T",
+        "valor": "0,80 mil"
+      },
+      {
+        "nome": "Administrativo",
+        "valor": "0,66 mil"
+      },
+      {
+        "nome": "Marcelo Dias",
+        "valor": "156,56 mil"
+      },
+      {
+        "nome": "Railton Mendes dos Santos",
+        "valor": "32,81 mil"
+      },
+      {
+        "nome": "Jose Tercio",
+        "valor": "16,88 mil"
+      },
+      {
+        "nome": "Faturamento",
+        "valor": "0,31 mil"
+      },
+      {
+        "nome": "Marcelo Dias",
+        "valor": "120,51 mil"
+      },
+      {
+        "nome": "José Tercio",
+        "valor": "59,78 mil"
+      },
+      {
+        "nome": "Railton Mendes dos Santos",
+        "valor": "29,58 mil"
+      },
+      {
+        "nome": "CBC Construtora Brasil Central LTDA",
+        "valor": "43,33 mil"
+      },
+      {
+        "nome": "Sharks FC Academy LTDA",
+        "valor": "13,12 mil"
+      },
+      {
+        "nome": "ArtPav Engenharia LTDA",
+        "valor": "9,74 mil"
+      },
+      {
+        "nome": "AR Construção e Pavimentação LTDA",
+        "valor": "8,99 mil"
+      },
+      {
+        "nome": "Real Transportes e Materiais de Construção LTDA",
+        "valor": "8,30 mil"
+      },
+      {
+        "nome": "Construtora Vale do Ouro LTDA",
+        "valor": "6,87 mil"
+      },
+      {
+        "nome": "Comercial FPS LTDA",
+        "valor": "6,46 mil"
+      },
+      {
+        "nome": "Município de Fazenda Nova",
+        "valor": "6,30 mil"
+      },
+      {
+        "nome": "Marcelo Dias",
+        "valor": "115,98 mil"
+      },
+      {
+        "nome": "Railton Mendes dos Santos",
+        "valor": "41,43 mil"
+      },
+      {
+        "nome": "Faturamento",
+        "valor": "30,00 mil"
+      },
+      {
+        "nome": "José Tercio",
+        "valor": "17,83 mil"
+      },
+      {
+        "nome": "Marcelo Dias",
+        "valor": "106,33 mil"
+      },
+      {
+        "nome": "José Tercio",
+        "valor": "47,35 mil"
+      },
+      {
+        "nome": "Railton Mendes",
+        "valor": "37,57 mil"
+      },
+      {
+        "nome": "Outros",
+        "valor": "0,91 mil"
+      }
+    ],
+    "clientes": [],
+    "produtos": [
+      {
+        "nome": "CBUQ FAIXA C (MASSA ASFÁLTICA)",
+        "quantidade": "606,61 t",
+        "valor": "94,02 mil"
+      },
+      {
+        "nome": "AREIA DE BRITA",
+        "quantidade": "413,43 t",
+        "valor": "28,77 mil"
+      },
+      {
+        "nome": "BRITA 0",
+        "quantidade": "390,45 t",
+        "valor": "40,33 mil"
+      },
+      {
+        "nome": "PÓ DE BRITA",
+        "quantidade": "159,13 t",
+        "valor": "13,16 mil"
+      },
+      {
+        "nome": "BRITA 1",
+        "quantidade": "123,79 t",
+        "valor": "10,85 mil"
+      },
+      {
+        "nome": "ULTRASFALTO - CAP CLIENTE",
+        "quantidade": "66,29 t",
+        "valor": "10,44 mil"
+      },
+      {
+        "nome": "CBUQ FAIXA C (CAP CLIENTE)",
+        "quantidade": "29,50 t",
+        "valor": "16,27 mil"
+      },
+      {
+        "nome": "ULTRASFALTO",
+        "quantidade": "23,52 t",
+        "valor": "11,52 mil"
+      },
+      {
+        "nome": "BRITA GRADUADA SIMPLES",
+        "quantidade": "11,14 t",
+        "valor": "0,99 mil"
+      },
+      {
+        "nome": "Areia de Brita",
+        "quantidade": "309,16 t",
+        "valor": "21,64 mil"
+      },
+      {
+        "nome": "Brita 0",
+        "quantidade": "256,22 t",
+        "valor": "25,73 mil"
+      },
+      {
+        "nome": "CBUQ Faixa C (Massa Asfáltica)",
+        "quantidade": "244,18 t",
+        "valor": "37,85 mil"
+      },
+      {
+        "nome": "Ultrasfalto - CAP Cliente",
+        "quantidade": "21,20 t",
+        "valor": "3,29 mil"
+      },
+      {
+        "nome": "Brita 1",
+        "quantidade": "17,70 t",
+        "valor": "1,54 mil"
+      },
+      {
+        "nome": "CBUQ Faixa C (Massa Asfáltica)",
+        "quantidade": "10,00 t",
+        "valor": "5,30 mil"
+      },
+      {
+        "nome": "Brita Graduada Simples",
+        "quantidade": "9,42 t",
+        "valor": "0,84 mil"
+      },
+      {
+        "nome": "CBUQ Faixa C (Massa Asfáltica)",
+        "quantidade": "767,72 t",
+        "valor": "119 mil"
+      },
+      {
+        "nome": "Areia de Brita",
+        "quantidade": "552,82 t",
+        "valor": "38,37 mil"
+      },
+      {
+        "nome": "Brita 0",
+        "quantidade": "491,81 t",
+        "valor": "50,92 mil"
+      },
+      {
+        "nome": "Brita 1",
+        "quantidade": "152,17 t",
+        "valor": "13,37 mil"
+      },
+      {
+        "nome": "Pó de Brita",
+        "quantidade": "101,19 t",
+        "valor": "8,3 mil"
+      },
+      {
+        "nome": "Ultrasfalto",
+        "quantidade": "89,36 t",
+        "valor": "48,71 mil"
+      },
+      {
+        "nome": "Brita Graduada Simples",
+        "quantidade": "81,30 t",
+        "valor": "7,2 mil"
+      },
+      {
+        "nome": "Ultrasfalto - Cap Cliente",
+        "quantidade": "66,96 t",
+        "valor": "10,38 mil"
+      },
+      {
+        "nome": "CBUQ Faixa C (Massa Asfáltica) - Cliente",
+        "quantidade": "23,76 t",
+        "valor": "12,93 mil"
+      },
+      {
+        "nome": "Remineralizador HVB-K RO",
+        "quantidade": "15,92 t",
+        "valor": "1,03 mil"
+      },
+      {
+        "nome": "Brita 0",
+        "quantidade": "602,37 t",
+        "valor": "62,35 mil"
+      },
+      {
+        "nome": "Areia de Brita",
+        "quantidade": "373,00 t",
+        "valor": "25,86 mil"
+      },
+      {
+        "nome": "CBUQ Faixa C",
+        "quantidade": "352,81 t",
+        "valor": "54,69 mil"
+      },
+      {
+        "nome": "Brita 1",
+        "quantidade": "145,48 t",
+        "valor": "12,69 mil"
+      },
+      {
+        "nome": "Ultrasfalto - CAP Cliente",
+        "quantidade": "115,48 t",
+        "valor": "17,90 mil"
+      },
+      {
+        "nome": "Pó de Brita",
+        "quantidade": "110,88 t",
+        "valor": "9,11 mil"
+      },
+      {
+        "nome": "Pedra de Mão",
+        "quantidade": "60,15 t",
+        "valor": "5,11 mil"
+      },
+      {
+        "nome": "Ultrasfalto",
+        "quantidade": "27,89 t",
+        "valor": "13,67 mil"
+      },
+      {
+        "nome": "CBUQ Faixa C (Massa Asfáltica)",
+        "quantidade": "19,94 t",
+        "valor": "11,47 mil"
+      },
+      {
+        "nome": "Brita Graduada Simples",
+        "quantidade": "19,45 t",
+        "valor": "1,81 mil"
+      },
+      {
+        "nome": "Rejeito de CBUQ",
+        "quantidade": "11,03 t",
+        "valor": "0,85 mil"
+      },
+      {
+        "nome": "Areia de Brita",
+        "quantidade": "637,80 t",
+        "valor": "44,26 mil"
+      },
+      {
+        "nome": "Brita 0",
+        "quantidade": "542,21 t",
+        "valor": "55,95 mil"
+      },
+      {
+        "nome": "CBUQ Faixa C",
+        "quantidade": "184,67 t",
+        "valor": "28,62 mil"
+      },
+      {
+        "nome": "Brita 1",
+        "quantidade": "173,59 t",
+        "valor": "15,26 mil"
+      },
+      {
+        "nome": "Pedra de Mão",
+        "quantidade": "85,29 t",
+        "valor": "7,28 mil"
+      },
+      {
+        "nome": "Pó de Brita",
+        "quantidade": "70,30 t",
+        "valor": "5,81 mil"
+      },
+      {
+        "nome": "Ultrasfalto Cap Cliente",
+        "quantidade": "24,18 t",
+        "valor": "3,75 mil"
+      },
+      {
+        "nome": "Ultrasfalto",
+        "quantidade": "22,16 t",
+        "valor": "12,08 mil"
+      },
+      {
+        "nome": "CBUQ Faixa C (segunda medição)",
+        "quantidade": "15,95 t",
+        "valor": "8,37 mil"
+      },
+      {
+        "nome": "Brita Graduada Simples",
+        "quantidade": "11,14 t",
+        "valor": "0,97 mil"
+      },
+      {
+        "nome": "CBUQ Faixa C",
+        "quantidade": "277,54 t",
+        "valor": "43,02 mil"
+      },
+      {
+        "nome": "Brita 0",
+        "quantidade": "163,99 t",
+        "valor": "17,08 mil"
+      },
+      {
+        "nome": "Ultrasfalto",
+        "quantidade": "33,32 t",
+        "valor": "18,37 mil"
+      },
+      {
+        "nome": "Brita 1",
+        "quantidade": "31,26 t",
+        "valor": "2,72 mil"
+      },
+      {
+        "nome": "Ultrasfalto Cap Cliente",
+        "quantidade": "18,54 t",
+        "valor": "2,87 mil"
+      },
+      {
+        "nome": "Pó de Brita",
+        "quantidade": "16,59 t",
+        "valor": "1,36 mil"
+      },
+      {
+        "nome": "Areia de Brita",
+        "quantidade": "11,91 t",
+        "valor": "0,83 mil"
+      },
+      {
+        "nome": "CBUQ Faixa C",
+        "quantidade": "9,90 t",
+        "valor": "5,20 mil"
+      },
+      {
+        "nome": "Areia de Brita",
+        "quantidade": "376,04 t",
+        "valor": "26,15 mil"
+      },
+      {
+        "nome": "CBUQ Faixa C",
+        "quantidade": "304,07 t",
+        "valor": "47,13 mil"
+      },
+      {
+        "nome": "Brita 0",
+        "quantidade": "301,44 t",
+        "valor": "31,96 mil"
+      },
+      {
+        "nome": "Pedra de Mão",
+        "quantidade": "238,18 t",
+        "valor": "20,25 mil"
+      },
+      {
+        "nome": "Ultrasfalto Cap Cliente",
+        "quantidade": "110,37 t",
+        "valor": "17,20 mil"
+      },
+      {
+        "nome": "Brita 1",
+        "quantidade": "85,91 t",
+        "valor": "8,24 mil"
+      },
+      {
+        "nome": "Ultrasfalto",
+        "quantidade": "63,71 t",
+        "valor": "34,51 mil"
+      },
+      {
+        "nome": "Brita Graduada Simples",
+        "quantidade": "34,14 t",
+        "valor": "3,06 mil"
+      },
+      {
+        "nome": "Pó de Brita",
+        "quantidade": "17,75 t",
+        "valor": "1,49 mil"
+      },
+      {
+        "nome": "Areia de Brita",
+        "quantidade": "505,49 t",
+        "valor": "34,98 mil"
+      },
+      {
+        "nome": "Brita 0",
+        "quantidade": "387,36 t",
+        "valor": "40,15 mil"
+      },
+      {
+        "nome": "Pedra de Mão",
+        "quantidade": "164,26 t",
+        "valor": "13,96 mil"
+      },
+      {
+        "nome": "Brita 1",
+        "quantidade": "162,28 t",
+        "valor": "13,52 mil"
+      },
+      {
+        "nome": "Ultrasfalto - Cap Cliente",
+        "quantidade": "150,83 t",
+        "valor": "23,64 mil"
+      },
+      {
+        "nome": "Ultrasfalto",
+        "quantidade": "106,24 t",
+        "valor": "58,29 mil"
+      },
+      {
+        "nome": "Brita Graduada Simples",
+        "quantidade": "103,00 t",
+        "valor": "9,25 mil"
+      },
+      {
+        "nome": "CBUQ Faixa C",
+        "quantidade": "77,82 t",
+        "valor": "12,06 mil"
+      },
+      {
+        "nome": "CBUQ Faixa C (Massa Asfáltica)",
+        "quantidade": "1,30 t",
+        "valor": "0,7 mil"
+      },
+      {
+        "nome": "CBUQ Faixa C (Massa Asfáltica)",
+        "quantidade": "385,58 t",
+        "valor": "59,76 mil"
+      },
+      {
+        "nome": "Brita 0",
+        "quantidade": "386,00 t",
+        "valor": "40,32 mil"
+      },
+      {
+        "nome": "Brita 1",
+        "quantidade": "367,24 t",
+        "valor": "31,88 mil"
+      },
+      {
+        "nome": "Ultrasfalto",
+        "quantidade": "39,03 t",
+        "valor": "21,44 mil"
+      },
+      {
+        "nome": "Areia de Brita",
+        "quantidade": "276,83 t",
+        "valor": "19,30 mil"
+      },
+      {
+        "nome": "Pedra de Mão",
+        "quantidade": "181,70 t",
+        "valor": "15,34 mil"
+      },
+      {
+        "nome": "Ultrasfalto - CAP Cliente",
+        "quantidade": "75,97 t",
+        "valor": "11,90 mil"
+      },
+      {
+        "nome": "Pó de Brita",
+        "quantidade": "90,42 t",
+        "valor": "7,57 mil"
+      },
+      {
+        "nome": "Brita Graduada Simples",
+        "quantidade": "26,98 t",
+        "valor": "2,35 mil"
+      },
+      {
+        "nome": "Areia de Brita",
+        "quantidade": "549,62 t",
+        "valor": "38,03 mil"
+      },
+      {
+        "nome": "Pó de Brita",
+        "quantidade": "365,85 t",
+        "valor": "30,00 mil"
+      },
+      {
+        "nome": "Brita 0",
+        "quantidade": "244,72 t",
+        "valor": "26,34 mil"
+      },
+      {
+        "nome": "Brita Graduada Simples",
+        "quantidade": "207,14 t",
+        "valor": "18,66 mil"
+      },
+      {
+        "nome": "Pedra de Mão",
+        "quantidade": "203,18 t",
+        "valor": "16,95 mil"
+      },
+      {
+        "nome": "Brita 1",
+        "quantidade": "177,08 t",
+        "valor": "16,98 mil"
+      }
+    ]
+  }
+]

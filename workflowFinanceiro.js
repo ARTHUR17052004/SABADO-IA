@@ -4,6 +4,28 @@ require(
 );
 
 // =========================
+// MEMÓRIA GLOBAL
+// =========================
+
+const {
+
+    salvarMemoria,
+    buscarMemoria
+
+} = require(
+    './core/memoriaGlobal'
+);
+
+// =========================
+// DATA GLOBAL
+// =========================
+
+const interpretarData =
+require(
+    './core/interpretadorData'
+);
+
+// =========================
 // EXECUTAR
 // =========================
 
@@ -31,14 +53,88 @@ async function executar() {
     }
 
     // =====================
+    // SALVA CONTEXTO
+    // =====================
+
+    salvarMemoria(
+        'ultimaPergunta',
+        pergunta
+    );
+
+    salvarMemoria(
+        'ultimoModulo',
+        'financeiro'
+    );
+
+    // =====================
+    // INTERPRETA DATA
+    // =====================
+
+    const dataInterpretada =
+
+        interpretarData(
+            pergunta
+        );
+
+    // =====================
     // EXTRAI DATAS
     // =====================
 
-    const datasEncontradas =
+    let datasEncontradas =
 
         pergunta.match(
             /\d{2}\/\d{2}\/\d{4}/g
         );
+
+    // =====================
+    // DATA GLOBAL
+    // =====================
+
+    if (
+
+        (!datasEncontradas ||
+
+        datasEncontradas.length === 0)
+
+        &&
+
+        dataInterpretada
+
+    ) {
+
+        datasEncontradas = [
+            dataInterpretada
+        ];
+
+    }
+
+    // =====================
+    // MEMÓRIA GLOBAL
+    // =====================
+
+    if (
+
+        (!datasEncontradas ||
+
+        datasEncontradas.length === 0)
+
+        &&
+
+        buscarMemoria(
+            'ultimaData'
+        )
+
+    ) {
+
+        datasEncontradas = [
+
+            buscarMemoria(
+                'ultimaData'
+            )
+
+        ];
+
+    }
 
     // =====================
     // SEM DATA
@@ -61,6 +157,15 @@ async function executar() {
     }
 
     // =====================
+    // SALVA DATA
+    // =====================
+
+    salvarMemoria(
+        'ultimaData',
+        datasEncontradas[0]
+    );
+
+    // =====================
     // TOTAIS
     // =====================
 
@@ -74,7 +179,12 @@ async function executar() {
     // PROCESSA DATAS
     // =====================
 
-    for (const data of datasEncontradas) {
+    for (
+
+        const data of
+        datasEncontradas
+
+    ) {
 
         const resultado =
 
@@ -158,7 +268,7 @@ R$ ${resultado.totalComprado.toFixed(2)}
     // RESPOSTA FINAL
     // =====================
 
-    console.log(`
+    const respostaFinal = `
 
 📊 COMPRAS
 
@@ -172,7 +282,24 @@ ${totalPedidos} pedidos
 💰 TOTAL COMPRADO:
 R$ ${totalComprado.toFixed(2)}
 
-`);
+`;
+
+    // =====================
+    // SALVA RESPOSTA
+    // =====================
+
+    salvarMemoria(
+        'ultimaResposta',
+        respostaFinal
+    );
+
+    // =====================
+    // FINAL
+    // =====================
+
+    console.log(
+        respostaFinal
+    );
 
 }
 
