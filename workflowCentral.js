@@ -10,7 +10,12 @@ require(
 
 const tratarTempo =
 require(
-    './services/ia/tratarTempo'
+    './services/IA/tratarTempo'
+);
+
+const calcular =
+require(
+    './services/IA/calculadora'
 );
 
 const {
@@ -67,6 +72,26 @@ async function executar() {
 
         console.log(
             respostaTempo
+        );
+
+        return;
+
+    }
+
+    // =====================
+    // CALCULADORA
+    // =====================
+
+    const respostaCalculo =
+
+        calcular(
+            pergunta
+        );
+
+    if (respostaCalculo) {
+
+        console.log(
+            respostaCalculo
         );
 
         return;
@@ -182,7 +207,7 @@ ${data || 'não identificada'}
     }
 
     // =====================
-    // PEDIDOS
+    // PEDIDO
     // =====================
 
     if (
