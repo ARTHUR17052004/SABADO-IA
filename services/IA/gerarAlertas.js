@@ -1,9 +1,19 @@
 const metricas =
-    require('../../core/metricas');
+    require('../../core/metricas.js');
 
 function gerarAlertas(
     pedido
 ) {
+
+    // =========================
+    // VALIDA
+    // =========================
+
+    if (!pedido) {
+
+        return null;
+
+    }
 
     const alertas = [];
 
@@ -12,11 +22,17 @@ function gerarAlertas(
     // =========================
 
     const valor =
+
         Number(
-            pedido.valor
+
+            String(
+                pedido.valor || 0
+            )
+
                 .replace(/[^\d,]/g, '')
                 .replace('.', '')
                 .replace(',', '.')
+
         );
 
     // =========================
@@ -24,8 +40,9 @@ function gerarAlertas(
     // =========================
 
     const quantidade =
+
         Number(
-            pedido.quantidade
+            pedido.quantidade || 0
         );
 
     // =========================
@@ -53,14 +70,14 @@ function gerarAlertas(
     }
 
     // =========================
-    // FORNECEDOR RECORRENTE
+    // CONSULTA RECORRENTE
     // =========================
 
     const vezesConsultadas =
 
         metricas.pedidosConsultados[
             pedido.numero
-        ];
+        ] || 0;
 
     if (vezesConsultadas >= 3) {
 
@@ -71,7 +88,7 @@ function gerarAlertas(
     }
 
     // =========================
-    // SEM ALERTA
+    // SEM ALERTAS
     // =========================
 
     if (alertas.length === 0) {
@@ -79,6 +96,10 @@ function gerarAlertas(
         return null;
 
     }
+
+    // =========================
+    // RESPOSTA
+    // =========================
 
     return `
 

@@ -1,85 +1,92 @@
-const puppeteer = require('puppeteer');
-const axios = require('axios');
+require('dotenv').config();
+
+const {
+    api,
+    criarHeaders
+} = require('./utils/goevoApi');
+
+const {
+    iniciarSessao
+} = require('./core/sessionManager');
 
 async function testarApiAutenticada() {
 
-    const browser = await puppeteer.launch({
-        headless: false
-    });
-
-    const page = await browser.newPage();
-
-    // abre sistema
-    await page.goto('https://pedreirahvb.goevo.net', {
-        waitUntil: 'networkidle2'
-    });
-
-    console.log('GOEVO aberto');
-
-    // login
-    await page.type(
-        '#wucLogin_txtUsuario',
-        'controladoria@grupobritec.com.br'
-    );
-
-    await page.type(
-        '#wucLogin_txtSenha',
-        'britec2323@'
-    );
-
-    await page.click('#wucLogin_btnLogin');
-
-    console.log('LOGIN REALIZADO');
-
-    // espera sistema carregar
-    await new Promise(resolve => setTimeout(resolve, 8000));
-
-    // pega cookies
-    const cookies = await page.cookies();
-
-    console.log('COOKIES CAPTURADOS');
-
-    // transforma cookies em header
-    const cookieHeader = cookies
-        .map(cookie => `${cookie.name}=${cookie.value}`)
-        .join('; ');
-
-    console.log('HEADER COOKIE:', cookieHeader);
-
-    // TESTE API
     try {
 
-        const response = await axios({
+        const sessao =
+            await iniciarSessao();
 
-            method: 'POST',
+        const headers =
+            criarHeaders(
+                sessao.cookieHeader
+            );
 
-            url: 'https://pedreirahvb.goevo.net/API/v1/PurchaseOrder',
+        console.log(
+            'CONSULTANDO API'
+        );
 
-            headers: {
-                'goevo_app_tptoken': '03a5b047-d855-4db2-af0f-98f60d26ad86',
-                'Cookie': cookieHeader,
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
+        const response =
+            await api.post(
 
-            data: new URLSearchParams({
-                purchase_order_id: '002821',
-                page: '1',
-                page_size: '10'
-            }).toString()
+                '/PurchaseOrder',
 
-        });
+                new URLSearchParams({
 
-        console.log('RESPOSTA API:');
-        console.log(JSON.stringify(response.data, null, 2));
+                    purchase_order_id:
+                        '002821',
+
+                    page:
+                        '1',
+
+                    page_size:
+                        '10'
+
+                }).toString(),
+
+                {
+                    headers
+                }
+
+            );
+
+        console.log(
+            'RESPOSTA API'
+        );
+
+        console.log(
+
+            JSON.stringify(
+                response.data,
+                null,
+                2
+            )
+
+        );
 
     } catch (error) {
 
-        console.log('ERRO API');
+        console.log(
+            'ERRO API'
+        );
 
         if (error.response) {
-            console.log(error.response.data);
+
+            console.log(
+
+                JSON.stringify(
+                    error.response.data,
+                    null,
+                    2
+                )
+
+            );
+
         } else {
-            console.log(error.message);
+
+            console.log(
+                error.message
+            );
+
         }
 
     }

@@ -1,4 +1,4 @@
-module.exports = {
+const metricas = {
 
     totalPerguntas: 0,
 
@@ -6,6 +6,42 @@ module.exports = {
 
     perguntas: {},
 
-    pedidosConsultados: {}
+    pedidosConsultados: {},
+
+    erros: 0
 
 };
+
+// =========================
+// REGISTRAR INTENÇÃO
+// =========================
+
+metricas.registrarIntencao = function (
+
+    intencao
+
+) {
+
+    metricas.intencoes[intencao] =
+
+        (
+
+            metricas.intencoes[intencao]
+            || 0
+
+        ) + 1;
+
+};
+
+// =========================
+// REGISTRAR ERRO
+// =========================
+
+metricas.registrarErro = function () {
+
+    metricas.erros++;
+
+};
+
+module.exports =
+    metricas;

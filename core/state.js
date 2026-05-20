@@ -1,8 +1,16 @@
 const state = {
 
+    // =====================
+    // BROWSER
+    // =====================
+
     browser: null,
 
     page: null,
+
+    // =====================
+    // PROCESSAMENTO
+    // =====================
 
     isProcessing: false,
 
@@ -10,8 +18,13 @@ const state = {
 
     status: 'IDLE',
 
+    // =====================
+    // FILA
+    // =====================
+
     queue: []
 
 };
 
-module.exports = state;
+module.exports =
+    state;

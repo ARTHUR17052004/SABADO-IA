@@ -1,10 +1,30 @@
-function log(tipo, mensagem) {
+function log(
 
-    const data = new Date().toISOString();
+    tipo,
+    mensagem,
+    dados = null
+
+) {
+
+    const data =
+        new Date()
+            .toISOString();
 
     console.log(
+
         `[${data}] [${tipo}] ${mensagem}`
+
     );
+
+    // =====================
+    // DADOS EXTRA
+    // =====================
+
+    if (dados) {
+
+        console.log(dados);
+
+    }
 
 }
 

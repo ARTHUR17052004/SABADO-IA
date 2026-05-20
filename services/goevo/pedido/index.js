@@ -7,19 +7,57 @@ const tratarPedido =
 const mapearPedido =
     require('./mapearPedido');
 
-async function buscarPedido(numeroPedido) {
+// =========================
+// BUSCAR PEDIDO
+// =========================
+
+async function buscarPedido(
+    numeroPedido
+) {
+
+    // =====================
+    // API
+    // =====================
 
     const retornoApi =
-        await consultarPedidoAPI(numeroPedido);
+
+        await consultarPedidoAPI(
+            numeroPedido
+        );
+
+    // =====================
+    // TRATA
+    // =====================
 
     const pedidoTratado =
-        tratarPedido(retornoApi);
+
+        tratarPedido(
+            retornoApi
+        );
+
+    // =====================
+    // SEM PEDIDO
+    // =====================
+
+    if (!pedidoTratado) {
+
+        return null;
+
+    }
+
+    // =====================
+    // MAPEIA
+    // =====================
 
     const pedidoFinal =
-        mapearPedido(pedidoTratado);
+
+        mapearPedido(
+            pedidoTratado
+        );
 
     return pedidoFinal;
 
 }
 
-module.exports = buscarPedido;
+module.exports =
+    buscarPedido;
